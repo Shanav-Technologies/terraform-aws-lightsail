@@ -7,7 +7,7 @@ module "lightsail" {
   environment          = "test"
   name                 = "lightsail"
   label_order          = ["name", "environment"]
-  public_key           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPOY10vvCSARJp5vsUxcKSJKes9QW/yrEHcZwwpt8vRt roshan@roshan"
+  public_key           = "xxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   use_default_key_pair = true
   instance_count       = 1
   user_data            = file("${path.module}/lightsail.sh")
