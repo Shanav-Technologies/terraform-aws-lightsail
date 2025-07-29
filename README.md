@@ -18,7 +18,7 @@ This Terraform module creates structured lightsail for Azure resources with spec
 
 ```hcl
 module "lightsail" {
-source               = "git::https://github.com/shanav-tech/terraform-aws-lightsail.git?ref=v1.0.0"
+source               = "git::https://github.com/Shanav-Technologies/terraform-aws-lightsail.git?ref=v1.0.0"
 environment          = "test"
 name                 = "lightsail"
 label_order          = ["name", "environment"]
@@ -52,7 +52,7 @@ Please ensure you specify the correct 'source' path for the module.
 - 'repository' :  Terraform current module repo.
 - 'availability_zone' :  The Availability Zone in which to create your instance.
 - 'blueprint_id' :  The bundle of specification information.
-- 'managedby' : ManagedBy, eg 'shanav-tech'.
+- 'managedby' : ManagedBy, eg 'Shanav-Technologies'.
 - 'blueprint_id' : The ID for a virtual private server image.
 - 'key_pair_name' : The key name to use for the instance.
 
@@ -63,14 +63,14 @@ Please ensure you specify the correct 'source' path for the module.
 - Other relevant security group outputs (modify as needed).
 
 # Examples
-For detailed examples on how to use this module, please refer to the '[example](https://github.com/shanav-tech/terraform-aws-lightsail/tree/master/_example)' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[example](https://github.com/Shanav-Technologies/terraform-aws-lightsail/tree/master/_example)' directory within this repository.
 
 ## Authors
 Your Name
 Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/shanav-tech/terraform-aws-lightsail/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Shanav-Technologies/terraform-aws-lightsail/blob/master/LICENSE) file for details.
 
 
 
@@ -80,31 +80,31 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.50.0 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.5.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.50.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.5.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/shanav-tech/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/Shanav-Technologies/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_lightsail_domain.test](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_domain) | resource |
-| [aws_lightsail_instance.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_instance) | resource |
-| [aws_lightsail_instance_public_ports.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_instance_public_ports) | resource |
-| [aws_lightsail_key_pair.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_key_pair) | resource |
-| [aws_lightsail_static_ip.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_static_ip) | resource |
-| [aws_lightsail_static_ip_attachment.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_static_ip_attachment) | resource |
+| [aws_lightsail_domain.test](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/lightsail_domain) | resource |
+| [aws_lightsail_instance.instance](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/lightsail_instance) | resource |
+| [aws_lightsail_instance_public_ports.public](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/lightsail_instance_public_ports) | resource |
+| [aws_lightsail_key_pair.instance](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/lightsail_key_pair) | resource |
+| [aws_lightsail_static_ip.instance](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/lightsail_static_ip) | resource |
+| [aws_lightsail_static_ip_attachment.instance](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/lightsail_static_ip_attachment) | resource |
 
 ## Inputs
 
@@ -123,7 +123,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_key_pair_name"></a> [key\_pair\_name](#input\_key\_pair\_name) | The key name to use for the instance. | `string` | `""` | no |
 | <a name="input_key_path"></a> [key\_path](#input\_key\_path) | Public key path  (e.g. `~/.ssh/id_rsa.pub`). | `string` | `""` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'shanav-tech'. | `string` | `"shanav-tech"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'Shanav-Technologies'. | `string` | `"Shanav-Technologies"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_pgp_key"></a> [pgp\_key](#input\_pgp\_key) | Flag to control the instance creation. | `string` | `""` | no |
 | <a name="input_port_info"></a> [port\_info](#input\_port\_info) | n/a | <pre>list(object({<br>    protocol = string<br>    port     = number<br>    cidrs    = list(string)<br>  }))</pre> | `null` | no |
